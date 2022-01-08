@@ -41,7 +41,7 @@ class GambarController extends Controller
             $imagePath = $img;
             $image = \Image::make($img);
             $jalur = time().'-'.$imagePath->getClientOriginalName();
-            $path = $image->save(storage_path('storage\rumah/'.$jalur), 10);
+            $path = $image->save(storage_path('app/public/rumah/'.$jalur), 10);
             $gambar->gambar = '/storage/rumah/'.$jalur;
             $gambar->save();
         }
