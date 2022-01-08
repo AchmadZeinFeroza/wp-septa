@@ -126,7 +126,7 @@ class UserController extends Controller
         if ($request->file('gambar')) {
             $imagePath = $request->file('gambar');
             $image = \Image::make($request->file('gambar'));
-            $jalur = time().'-'.$imagePath->getClientOriginalName();
+            $jalur = 'avatar'.time().'-'.$imagePath->getClientOriginalName();
             $path = $image->save(public_path('storage\user/'.$jalur), 8);
             $data->gambar = '/storage/user/'.$jalur;
         }else{

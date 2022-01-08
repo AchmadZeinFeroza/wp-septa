@@ -69,7 +69,7 @@ class FurnitureController extends Controller
             $gambar = new Gambar;
             $gambar->produk_id = $produk->id;
             $imagePath = $img;
-            $path = $img->storeAs('furniture', time().'-'.$imagePath->getClientOriginalName() , 'public');
+            $path = $img->storeAs('furniture', 'furniture'.time().'-'.$imagePath->getClientOriginalName() , 'public');
             $gambar->gambar = '/storage/'.$path;
             $gambar->save();
         }
