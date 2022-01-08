@@ -99,9 +99,6 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="u-s-p-y-60">
-                                {{ $furniture->links() }}
-                            </div>
                         </div>
                     </div>
                 </div>
