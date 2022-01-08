@@ -40,8 +40,8 @@ class GambarController extends Controller
             $gambar->produk_id = $request->id_produk;
             $imagePath = $img;
             $image = \Image::make($img);
-            $jalur = 'produk'.time().$imagePath->getClientOriginalName();
-            $path = $image->save(public_path('storage\rumah/'.$jalur), 10);
+            $jalur = time().'-'.$imagePath->getClientOriginalName();
+            $path = $image->save(storage_path('storage\rumah/'.$jalur), 10);
             $gambar->gambar = '/storage/rumah/'.$jalur;
             $gambar->save();
         }
