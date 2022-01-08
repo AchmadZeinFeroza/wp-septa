@@ -62,7 +62,7 @@ class LaporanController extends Controller
             $imagePath = $img;
             $image = \Image::make($img);
             $jalur = time().'-'.$imagePath->getClientOriginalName();
-            $path = $image->save(storage_path('storage\laporan/'.$jalur), 8);
+            $path = $image->save(storage_path('laporan/'.$jalur), 8);
             $gambar->foto = '/storage/laporan/'.$jalur;
             $gambar->save();
         }
@@ -165,7 +165,7 @@ class LaporanController extends Controller
             $imagePath = $img;
             $image = \Image::make($img);
             $jalur = time().'-'.$imagePath->getClientOriginalName();
-            $path = $image->save(storage_path('storage\laporan/'.$jalur), 8);
+            $path = $image->save(storage_path('laporan/'.$jalur), 8);
             $gambar->foto = '/storage/laporan/'.$jalur;
             $gambar->save();
         }

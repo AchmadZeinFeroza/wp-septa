@@ -76,7 +76,7 @@ class WebsiteController extends Controller
             $imagePath = $request->file('gambar');
             $image = \Image::make($request->file('gambar'));
             $jalur = time().'-'.$imagePath->getClientOriginalName();
-            $path = $image->save(storage_path('storage\slideshow/'.$jalur), 10);
+            $path = $image->save(storage_path('slideshow/'.$jalur), 10);
             $str = str_replace('/storage', '', $data->gambar);
             unlink(storage_path('app/public'.$str));
             $data->gambar = '/storage/slideshow/'.$jalur;
