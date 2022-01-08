@@ -16,10 +16,10 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Beranda</a></li>
+                                    <a href="{{url('/')}}">Beranda</a></li>
                                 <li class="is-marked">
 
-                                    <a href="contact.html">Kontak</a></li>
+                                    <a href="{{url('/kontak')}}">Kontak</a></li>
                             </ul>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
 
                                                 <label for="email"></label>
 
-                                                <input class="input-text input-text--border-radius input-text--primary-style" type="text" id="email" name="email" placeholder="Email" required></div>
+                                                <input class="input-text input-text--border-radius input-text--primary-style" type="email" id="email" name="email" placeholder="Email" required></div>
                                             <div class="u-s-m-b-30">
 
                                                 <label for="no_telpon"></label>

@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 border-right">
-                    <form action="{{route('user.update', auth()->user()->id)}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('user.update', auth()->user()->id)}}" method="post" id="form" enctype="multipart/form-data">
                     @method('patch')
                     @csrf
                     <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{asset(auth()->user()->gambar)}}">
@@ -32,8 +32,9 @@
                                     <div class="col-md-12"><label class="labels">Nomor Telepon</label><input type="text" class="form-control" placeholder="Nomor Telepon" value="{{auth()->user()->no_telpon}}" name="no_telpon"></div>
                                 </div>
                                 <div class="row mt-3">
-                                    <div class="col-md-6"><label class="labels">Password</label><input type="password" class="form-control" placeholder="Password" value="" name="password"></div>
-                                    <div class="col-md-6"><label class="labels">Konfirmasi Password Baru</label><input name="confirm" type="password" class="form-control" placeholder="Konfirmasi Password Baru" value="" disabled></div>
+                                    <div class="col-md-6"><label class="labels">Password</label><input type="password" id="password" class="form-control" placeholder="Password" value="" name="password"></div>
+                                    <div class="col-md-6"><label class="labels">Konfirmasi Password Baru</label><input name="confirm" id="confirm_password" type="password" class="form-control" placeholder="Konfirmasi Password Baru" value="" disabled>
+                                    <br><small id="message"></small></div>
                                 </div>
                                 <div class="mt-5 text-center">
                                     <button class="btn btn-primary profile-button" type="submit" id="save">Save Profile</button>
@@ -53,6 +54,23 @@
         if($(this).val() != '') {
             $(':input[type="submit"]').prop('disabled', true);
             $(':input[name="confirm"]').prop('disabled', false);
+            $("#password ,#confirm_password").on("keyup", function () {
+                var value = $("#password").val();
+                if($('#confirm_password').val() === ''){
+                    $(':input[type="submit"]').prop('disabled', true);
+                }
+                if ($("#password").val() === ''){
+                    $(':input[type="submit"]').prop('disabled', false);
+                }else{
+                    if ($("#password").val() === $("#confirm_password").val() && $("#password").val().length >= 5 ) {
+                        $("#message").html("Sudah Cocok").css("color", "green");
+                        $(':input[type="submit"]').prop('disabled', false);
+                    }else{
+                        $(':input[type="submit"]').prop('disabled', true);
+                        $("#message").html("Belum Cocok / Kurang dari 5 Karakter").css("color", "red");
+                    }
+                }
+            });
         }else{
             $(':input[name="confirm"]').prop('disabled', true);
             $(':input[type="submit"]').prop('disabled', false);

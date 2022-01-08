@@ -16,7 +16,7 @@
                             <ul class="pd-breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.hml">Home</a></li>
+                                    <a href="{{url('/')}}">Home</a></li>
                                 <li class="has-separator">
 
                                     <a href="shop-side-version-2.html">{{$detail->jenis->kategori->nama}}</a></li>
@@ -82,7 +82,7 @@
 
                                     <span class="pd-detail__click-wrap"><i class="far fa-envelope u-s-m-r-6"></i>
 
-                                        <a href="signin.html">Email me When the price drops</a>
+                                        <a href="mailto:{{$data->email}}">Email me When the price drops</a>
 
                                         <span class="pd-detail__click-count">(20)</span></span></div>
                             </div>
@@ -90,19 +90,10 @@
                                 <ul class="pd-social-list">
                                     <li>
 
-                                        <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <a class="s-wa--color-hover" href="tel:{{$data->no_wa}}"><i class="fab fa-whatsapp"></i></a></li>
                                     <li>
 
-                                        <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li>
-
-                                        <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li>
-
-                                        <a class="s-wa--color-hover" href="#"><i class="fab fa-whatsapp"></i></a></li>
-                                    <li>
-
-                                        <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <a class="s-gplus--color-hover" href="mailto:{{$data->email}}"><i class="fab fa-google"></i></a></li>
                                 </ul>
                             </div>
                             <div class="u-s-m-b-15">
@@ -131,13 +122,13 @@
                                 <ul class="pd-detail__policy-list">
                                     <li><i class="fas fa-check-circle u-s-m-r-8"></i>
 
-                                        <span>Buyer Protection.</span></li>
+                                        <span>Jujur dan Terpercaya</span></li>
                                     <li><i class="fas fa-check-circle u-s-m-r-8"></i>
 
-                                        <span>Full Refund if you don't receive your order.</span></li>
-                                    <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+                                        <span>Kualitas Bagus</span></li>
+                                    {{-- <li><i class="fas fa-check-circle u-s-m-r-8"></i>
 
-                                        <span>Returns accepted if product not as described.</span></li>
+                                        <span>Returns accepted if product not as described.</span></li> --}}
                                 </ul>
                             </div>
                         </div>

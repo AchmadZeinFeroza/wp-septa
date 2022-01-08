@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Pesan;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Email;
+use App\Models\Perusahaan;
 
 class PesanController extends Controller
 {
@@ -16,7 +17,7 @@ class PesanController extends Controller
      */
     public function index()
     {
-        $data = Pesan::get();
+        $data = Pesan::orderBy('created_at', 'desc')->get();
         return view('admin.pesan.index', compact('data'));
     }
 
@@ -38,12 +39,32 @@ class PesanController extends Controller
      */
     public function store(Request $request)
     {
+        $kontak = Perusahaan::get();
         $data = array(
             'nama' => $request->nama,
             'no_telpon' => $request->no_telpon,
             'pesan' => $request->pesan,
-            'email' => $request->email
+            'email' => $request->email,
         );
+        $data['kontak'] = array(
+            'no_wa' => $kontak[0]->no_wa,
+            'email' => $kontak[0]->email,
+            'no_telpon' => $kontak[0]->no_telpon,
+        );
+        if($request->rumah){
+            $data['rumah'] = array(
+                'rumah' => $request->rumah,
+                'lokasi' => $request->lokasi,
+                'harga' => $request->harga,
+            );
+        }
+        if($request->furniture){
+            $data['furniture'] = array(
+                'furniture' => $request->furniture,
+                'quantity' => $request->quantity,
+                'harga' => $request->harga,
+            );
+        }
         Mail::to($request->email)->send(new Email($data));
         return redirect()->route('pesan.index');
     }

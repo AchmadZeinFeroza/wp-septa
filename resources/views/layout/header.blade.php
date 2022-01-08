@@ -9,6 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="images/favicon.png" rel="shortcut icon">
     <title>CV WIRA BUMI</title>
+    @include('meta::manager', [
+            'title'         => 'Wira Bumi',
+            'description'   => 'Wira Bumi Furniture dan Interior',
+            'image'         => '',
+    ])
 
     <!--====== Google Font ======-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
@@ -29,6 +34,8 @@
         }
         .judul{
             font-family: judul;
+            font-size: 5vw;
+            color: #fa4400;
         }
     </style>
 </head>

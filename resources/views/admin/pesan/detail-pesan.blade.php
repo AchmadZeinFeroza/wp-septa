@@ -22,12 +22,14 @@
                 {{$data->no_telpon}}
             </div>
         </div>
-        <div class="form-group row">
-            <label  class="col-sm-2 col-form-label">Nomor Telepon   :</label>
-            <div class="col-sm-10">
-                {{$data->no_telpon}}
+        @if ($data->no_wa !== null)
+            <div class="form-group row">
+                <label  class="col-sm-2 col-form-label">Nomor Whatsapp   :</label>
+                <div class="col-sm-10">
+                    {{$data->no_wa}}
+                </div>
             </div>
-        </div>
+        @endif
         <div class="form-group row">
             <label  class="col-sm-2 col-form-label">Pesan   :</label>
             <div class="col-sm-10" >
@@ -40,18 +42,21 @@
                 <div class="col-sm-10">
                     {{$data->furniture}}
                 </div>
+                <input type="hidden" name="furniture" value="{{$data->furniture}}">
             </div>
             <div class="form-group row">
                 <label  class="col-sm-2 col-form-label">Quantity    :</label>
                 <div class="col-sm-10">
                     {{$data->quantity}}
                 </div>
+                <input type="hidden" name="quantity" value="{{$data->quantity}}">
             </div>
             <div class="form-group row">
                 <label  class="col-sm-2 col-form-label">Harga   :</label>
                 <div class="col-sm-10">
                     {{$data->harga}}
                 </div>
+                <input type="hidden" name="harga" value="{{$data->harga}}">
             </div>
         @endif
         @if ($data->kategori === 'rumah')
@@ -60,18 +65,21 @@
                 <div class="col-sm-10">
                     {{$data->rumah}}
                 </div>
+                <input type="hidden" name="rumah" value="{{$data->rumah}}">
             </div>
             <div class="form-group row">
                 <label  class="col-sm-2 col-form-label">Lokasi  :</label>
                 <div class="col-sm-10">
                     {{$data->lokasi}}
                 </div>
+                <input type="hidden" name="lokasi" value="{{$data->lokasi}}">
             </div>
             <div class="form-group row">
                 <label  class="col-sm-2 col-form-label">Harga   :</label>
                 <div class="col-sm-10">
                     {{$data->harga}}
                 </div>
+                <input type="hidden" name="harga" value="{{$data->harga}}">
             </div>
         @endif
         <input type="hidden" name="email" value="{{$data->email}}">

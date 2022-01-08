@@ -21,11 +21,9 @@
                                     <div class="col-12">
                                         <div class="slider-content slider-content--animation">
                                             
-                                            <span class="content-span-2 u-c-white">{{$item->judul}}</span>
+                                            <span class="content-span-2 u-c-white">Wira Bumi</span>
                                             
-                                            <span class="content-span-3 u-c-white">{{$item->deskripsi}}</span>
-                                            
-                                            <a class="shop-now-link btn--e-brand" href="#furniture">SHOP NOW</a></div>
+                                            <a class="shop-now-link btn--e-brand" href="#furniture"><h3>Lihat Produk</h3></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -348,15 +346,18 @@
                             <div class="outer-footer__content">
 
                                 <span class="outer-footer__content-title">Ada yang ingin ditanyakan ?</span>
-                                <form class="newsletter">
+                                <form class="newsletter" action="{{url('/pesan/customer')}}" method="POST">
+                                    @csrf
                                     <div class="newsletter__group">
 
                                         <label for="newsletter"></label>
 
-                                        <input class="input-text input-text--only-white u-s-m-y-2" type="text" id="newsletter" placeholder="Masukkan Nama Anda">
-                                        <input class="input-text input-text--only-white u-s-m-y-2" type="text" id="newsletter" placeholder="Masukkan Email Anda">
-                                        <input class="input-text input-text--only-white u-s-m-y-2" type="text" id="newsletter" placeholder="Masukan Nomor Telepon Anda">
-                                        <textarea class="text-area text-area--only-white col-12 u-s-m-y-2">Masukkan Pesan Anda</textarea>
+                                        <input class="input-text input-text--border-radius input-text--primary-style col-12" type="text" id="nama" name="nama" placeholder="Nama" required>
+                                        <input class="input-text input-text--border-radius input-text--primary-style col-12" type="email" id="email" name="email" placeholder="Email" required>
+                                        <input class="input-text input-text--border-radius input-text--primary-style col-12" type="text" id="no_telpon" name="no_telpon" placeholder="Nomor Telepon" required>
+                                        <input class="input-text input-text--border-radius input-text--primary-style col-12" type="text" id="no_wa" name="no_wa" placeholder="Nomor WhatsApp" required>
+                                        <textarea class="text-area text-area--border-radius text-area--primary-style col-12" id="pesan" name="pesan" placeholder="Masukkan Pesan" required></textarea>
+                                        <input type="hidden" name="kategori" value="umum">
                                         <button class="gl-tag btn--e-transparent-hover-brand-b-2 u-s-m-y-2 u-s-p-x-2" type="submit" style="float: right;" >Kirim</button>
                                 </form>
                             </div>
