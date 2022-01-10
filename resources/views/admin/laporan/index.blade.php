@@ -59,6 +59,7 @@
                                 <td>{{ $item->created_at->format('d-m-Y - H:i') }}</td>
                                 <td>
                                 @if (auth()->user()->role->id !== 3 )
+                                
                                     @if ($item->keterangan_id === 1)
                                         <a href="{{url('laporan/detail/'.$item->id)}}" type="submit" class="btn btn-small btn-primary">Verifikasi</a>
                                     @else

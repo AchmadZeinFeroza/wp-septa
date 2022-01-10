@@ -40,6 +40,7 @@
     </style>
 </head>
 <body class="config">
+    {{-- <button class="btn btn-success" style="position: fixed; bottom:0; right:0; z-index: 100;">Cek</button> --}}
     <div class="preloader is-active">
         <div class="preloader__wrap">
 

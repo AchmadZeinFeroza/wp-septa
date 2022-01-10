@@ -51,7 +51,7 @@ class UserController extends Controller
             $imagePath = $request->file('ktp');
             $image = \Image::make($request->file('ktp'));
             $jalur = time().'-'.$imagePath->getClientOriginalName();
-            $path = $image->save(public_path('ktp/'.$jalur), 8);
+            $path = $image->save(storage_path('app/public/user/'.$jalur), 8);
             $path = '/storage/ktp/'.$jalur;
         }
         $user = User::create([
