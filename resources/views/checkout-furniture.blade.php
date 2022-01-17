@@ -48,11 +48,11 @@
 
                                                         <span class="table-p__name">
 
-                                                            <a href="product-detail.html">{{$detail->produk->nama}}</a></span>
+                                                            <a href="#">{{$detail->produk->nama}}</a></span>
 
                                                         <span class="table-p__category">
 
-                                                            <a href="shop-side-version-2.html">{{$detail->jenis->nama}}</a></span>
+                                                            <a href="#">{{$detail->jenis->nama}}</a></span>
                                                     </div>
                                                 </div>
                                             </td>

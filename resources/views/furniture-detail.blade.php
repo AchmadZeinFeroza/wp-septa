@@ -19,13 +19,13 @@
                                     <a href="{{url('/')}}">Home</a></li>
                                 <li class="has-separator">
 
-                                    <a href="shop-side-version-2.html">{{$detail->jenis->kategori->nama}}</a></li>
+                                    <a href="#">{{$detail->jenis->kategori->nama}}</a></li>
                                 <li class="has-separator">
 
-                                    <a href="shop-side-version-2.html">{{$detail->jenis->nama}}</a></li>
+                                    <a href="#">{{$detail->jenis->nama}}</a></li>
                                 <li class="is-marked">
 
-                                    <a href="shop-side-version-2.html">{{$detail->produk->nama}}</a></li>
+                                    <a href="#">{{$detail->produk->nama}}</a></li>
                             </ul>
                         </div>
                         <!--====== End - Product Breadcrumb ======-->

@@ -99,7 +99,7 @@
                                                     <div class="product-o product-o--hover-on product-o--radius">
                                                         <div class="product-o__wrap">
 
-                                                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="#">
 
                                                                 <img class="aspect__img" src="{{asset($item->produk->gambar[0]->gambar)}}" alt=""></a>
                                                             <div class="product-o__action-wrap">
@@ -113,10 +113,10 @@
 
                                                         <span class="product-o__category">
 
-                                                            <a href="shop-side-version-2.html">{{$item->jenis->kategori->nama}}</a></span>
+                                                            <a href="#">{{$item->jenis->kategori->nama}}</a></span>
 
                                                         <span class="product-o__name">
-                                                            <a href="product-detail.html">{{$item->produk->nama}}</a>
+                                                            <a href="#">{{$item->produk->nama}}</a>
                                                         </span>
                                                         <span class="product-o__price">Rp. {{$item->harga}}</span>
                                                     </div>
@@ -183,18 +183,18 @@
 
                                         <span class="product-o__category">
 
-                                            <a href="shop-side-version-2.html">Rumah</a></span>
+                                            <a href="#">Rumah</a></span>
 
                                         <span class="product-o__name">
 
-                                            <a href="product-detail.html">{{$item->nama}}</a></span>
+                                            <a href="#">{{$item->nama}}</a></span>
                                     </div>
                                 </div>
                                 @endforeach
                                 <div class="col-lg-12">
                                     <div class="load-more">
 
-                                        <a href="{{url('/rumah')}}" class="about__link btn--e-secondary u-s-m-t-30" href="index.html" target="_blank">Lihat Selengkapnya</a>
+                                        <a href="{{url('/rumah')}}" class="about__link btn--e-secondary u-s-m-t-30" target="_blank">Lihat Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +246,7 @@
 
                                                 <span class="bp-mini__h1">
 
-                                                    <a href="blog-detail.html">{{$item->alamat}}</a></span>
+                                                    <a href="#">{{$item->alamat}}</a></span>
                                                 <div class="blog-t-w">
                                                     <a href="{{$item->pin_lokasi}}" class="gl-tag btn--e-transparent-hover-brand-b-2" target="__blank">Lihat Maps</a></div>
                                             </div>
@@ -256,7 +256,7 @@
                                 <div class="col-lg-12">
                                     <div class="load-more">
 
-                                        <a href="{{url('/lokasi')}}" class="about__link btn--e-secondary u-s-m-t-30" href="index.html" target="_blank">Lihat Selengkapnya</a>
+                                        <a href="{{url('/lokasi')}}" class="about__link btn--e-secondary u-s-m-t-30" target="_blank">Lihat Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
@@ -293,21 +293,11 @@
                                     @endif
                                     @if ($data->link_fb)
                                         <div class="brand-slide" style="height: 150px;">
-                                            <a href="shop-side-version-2.html">
+                                            <a href="{{$data->link_fb}}">
                                                 <img src="{{asset('/storage/logo/fb.png')}}" alt="">
                                             </a>
                                         </div>
                                     @endif
-                                    {{-- <div class="brand-slide" style="height: 150px;">
-                                        <a href="shop-side-version-2.html">
-                                            <img src="{{asset('/storage/logo/bukalapak.png')}}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="brand-slide" style="height: 150px;">
-                                        <a href="shop-side-version-2.html">
-                                            <img src="{{asset('/storage/logo/lazada.png')}}" alt="">
-                                        </a>
-                                    </div> --}}
 
                                 </div>
                             </div>

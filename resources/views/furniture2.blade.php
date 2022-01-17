@@ -77,12 +77,12 @@
                                                         <img class="aspect__img" src="{{asset($item->produk->gambar[0]->gambar)}}" alt=""></a>
                                                     <div class="product-m__add-cart">
 
-                                                        <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Pilih Sekarang</a></div>
+                                                        <a href="" class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Pilih Sekarang</a></div>
                                                 </div>
                                                 <div class="product-m__content">
                                                     <div class="product-m__category">
 
-                                                        <a href="shop-side-version-2.html">{{$item->jenis->kategori->nama}}</a></div>
+                                                        <a href="{{url('/furniture/produk/detail/'.$item->id)}}">{{$item->jenis->kategori->nama}}</a></div>
                                                     <div class="product-m__name">
 
                                                         <a href="{{url('/furniture/produk/detail/'.$item->id)}}">{{$item->produk->nama}}</a></div>
