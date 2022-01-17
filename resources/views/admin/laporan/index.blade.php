@@ -65,7 +65,7 @@
                                     @else
                                         <a href="{{url('laporan/detail/'.$item->id)}}" type="submit" class="btn btn-small btn-primary"><i class="fas fa-eye"></i></a>
                                     @endif
-                                @else
+                                @elsex  
                                     @if ($item->keterangan_id !== 1)
                                         <a href="{{url('laporan/detail/'.$item->id)}}" type="submit" class="btn btn-small btn-primary"><i class="fas fa-eye"></i></a>
                                     @else
@@ -78,50 +78,6 @@
                         </tbody>
                     </table>
                 </div>
-            {{-- <table id="example" class="table table-striped table-bordered" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Nama Mandor</th>
-                        <th>Gambar</th>
-                        <th>Deskripsi</th>
-                        <th>Keterangan</th>
-                        @if (auth()->user()->role->id === 3 )
-                        <th>Alasan</th>
-                        @endif
-                        <th>Tanggal</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($data as $item)
-                    <tr>
-                        <td>{{$item->user->nama}}</td>
-                        <td>
-                            <a class="btn btn-small btn-primary foto" id="btn-gambar" data-target="#modal-gambar" data-toggle="modal" data-id="{{$item->id}}"><i class="fas fa-eye"></i></a>
-                        </td>
-                        <td>{{$item->deskripsi}}</td>
-                        <td>{{$item->keterangan->keterangan}}</td>
-                        @if (auth()->user()->role->id === 3 )
-                        <td>{{ $item->alasan}}</td>
-                        @endif
-                        <td>{{ $item->created_at->format('d-m-Y - H:i') }}</td>
-                        <td>
-                        @if (auth()->user()->role->id !== 3 )
-                            @if ($item->keterangan_id === 1)
-                            <form class="d-inline-block" action="{{route('laporan.disetujui', $item->id)}}" method="post">
-                                @csrf
-                                <button type="submit" class="btn btn-small btn-success"><i class="fas fa-check"></i></button>
-                            </form>
-                                <button type="submit" class="btn btn-small btn-danger" data-toggle="modal-tolak" data-target="#modalTolak" id="tolak" data-url="{{route('laporan.ditolak', $item->id)}}" ><i class="fas fa-times"></i></button>
-                            @endif
-                        @else
-                            <a class="btn btn-small btn-warning" href="{{route('laporan.edit', $item->id)}}"><i class="fas fa-pen"></i></a>
-                        @endif
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table> --}}
         </div>
     </div>
 </div>
