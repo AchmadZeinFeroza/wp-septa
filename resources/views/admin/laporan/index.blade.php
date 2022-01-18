@@ -65,7 +65,7 @@
                                     @else
                                         <a href="{{url('laporan/detail/'.$item->id)}}" type="submit" class="btn btn-small btn-primary"><i class="fas fa-eye"></i></a>
                                     @endif
-                                @elsex  
+                                @else  
                                     @if ($item->keterangan_id !== 1)
                                         <a href="{{url('laporan/detail/'.$item->id)}}" type="submit" class="btn btn-small btn-primary"><i class="fas fa-eye"></i></a>
                                     @else

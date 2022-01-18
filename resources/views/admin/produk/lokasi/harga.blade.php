@@ -1,5 +1,5 @@
 @extends('admin.template.master')
-@section('title', 'Produk Rumah')
+@section('title', 'Atur Harga Lokasi')
 @section('content')
 <div>
     <div class="row mb-3 mt-5">

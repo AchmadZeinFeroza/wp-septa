@@ -311,7 +311,17 @@
         </div>
         <!--====== End - App Content ======-->
 
-
+        <div style="position: fixed;
+        right: 2.825rem;
+        bottom: 8.275rem;
+        display: block;
+        width: 1.875rem;
+        height: 3rem;
+        z-index: 9;">
+            <a href="https://wa.me/+62{{$data->no_wa}}">
+                <img class="img-fluid" src="{{asset('img/whatsapp.png')}}" alt="" width="50px" style="visibility: visible;">
+            </a> 
+        </div>
         <!--====== Main Footer ======-->
         <footer>
             <div class="outer-footer u-s-p-y-0">

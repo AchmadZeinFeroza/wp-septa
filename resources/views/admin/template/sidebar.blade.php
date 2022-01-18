@@ -7,7 +7,7 @@
 @if (auth()->user()->role->id !== 2 )
 <li class="nav-item {{ request()->is('laporan*') ? 'active' : '' }}">
     <a class="nav-link" href="{{route('laporan.show', 1)}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-book"></i>
         <span>Laporan</span>
     </a>
 </li>
@@ -15,7 +15,7 @@
 @if (auth()->user()->role->id !== 3 )
 <li class="nav-item {{ request()->is('produk*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages">
-        <i class="fas fa-fw fa-folder"></i>
+        <i class="fas fa-fw fa-cart-arrow-down"></i>
         <span>Produk</span>
     </a>
     <div id="collapsePages" class="collapse">
@@ -29,7 +29,7 @@
 </li>
 <li class="nav-item {{ request()->is('wensite*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagess">
-        <i class="fas fa-fw fa-folder"></i>
+        <i class="fas fa-fw fa-eye"></i>
         <span>Website</span>
     </a>
     <div id="collapsePagess" class="collapse">
@@ -45,14 +45,14 @@
 </li>
 <li class="nav-item">
     <a class="nav-link" href="{{route('pesan.index')}}">
-        <i class="fas fa-fw fa-user"></i>
+        <i class="fas fa-fw fa-envelope"></i>
         <span>Pesan</span>
     </a>
 </li>
 @endif
 <li class="nav-item">
     <a class="nav-link" href="{{route('user.profil')}}">
-        <i class="fas fa-fw fa-user"></i>
+        <i class="fas fa-fw fa-address-book"></i>
         <span>Profil</span>
     </a>
 </li>
@@ -66,7 +66,7 @@
 @endif
 <li class="nav-item">
     <a class="nav-link" href="{{route('logout')}}">
-        <i class="fas fa-fw fa-user"></i>
+        <i class="fas fa-fw fa-power-off"></i>
         <span>Logout</span>
     </a>
 </li>

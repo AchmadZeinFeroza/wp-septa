@@ -1,5 +1,5 @@
 @extends('admin.template.master')
-@section('title', 'Ubah Kategori Produk')
+@section('title', 'Ubah Data Perusahaan')
 @section('content')
 <div class="container-fluid">
     @foreach ($data as $item)
