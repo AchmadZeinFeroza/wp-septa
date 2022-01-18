@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="feroza">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="images/favicon.png" rel="shortcut icon">
     <title>CV WIRA BUMI</title>
     @include('meta::manager', [
             'title'         => 'Wira Bumi',
-            'description'   => 'Wira Bumi Furniture dan Interior',
-            'image'         => '',
+            'description'   => 'Wira Bumi Meruapakn perusahaan yang bergerak dibidang property dan interior design. wirabumi bertempat di kota Genteng kabupaten Banyuwangi Jawa Timur',
+            'keywords'      => 'wira bumi, cv wira bumi, wira bumi furniture, property wira bumi, wirabumi, wirabumi banyuwangi, cv wirabumi',
     ])
 
     <!--====== Google Font ======-->
