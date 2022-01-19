@@ -38,7 +38,6 @@ class WebsiteController extends Controller
             'no_telpon' => 'required',
             'email' => 'required',
         ]);
-        dd($request->alamat);
         Perusahaan::find($id)->update($request->all());
         alert()->success('Deskripsi Perusahaan Berhasil Diubah', 'Website');
         return redirect()->back();
