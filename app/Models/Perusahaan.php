@@ -10,5 +10,5 @@ class Perusahaan extends Model
     use HasFactory;
 
     protected $table = 'perusahaan';
-    protected $fillable = ['nama','no_wa', 'no_telpon', 'email', 'link_wa', 'link_shopee', 'link_tokopedia', 'link_fb', 'deskripsi', 'maps'];
+    protected $fillable = ['nama','no_wa', 'no_telpon', 'email', 'link_wa', 'link_shopee', 'link_tokopedia', 'link_fb', 'deskripsi', 'maps', 'alamat'];
 }
