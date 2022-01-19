@@ -12,7 +12,7 @@
 
                 <a class="main-logo" href="{{url('/')}}">
 
-                    <span class="judul" >Wira Bumi</span></a>
+                    <img src="{{asset('img/logo.png')}}" alt="" class="img-fluid" width="60rem"></a>
                 <!--====== End - Main Logo ======-->
 
 

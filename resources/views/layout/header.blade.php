@@ -18,7 +18,7 @@
 
     <!--====== Vendor Css ======-->
     <link rel="stylesheet" href="{{asset('css/vendor.css')}}">
-
+    <link rel="icon" href="{{asset('img/logo.png')}}">
     <!--====== Utility-Spacing ======-->
     <link rel="stylesheet" href="{{asset('css/utility.css')}}">
 
