@@ -29,6 +29,6 @@ class Pesan extends Mailable
      */
     public function build()
     {
-        return $this->from('uchihaferoza22@gmail.com')->subject('Balasan Pesan Septa')->view('admin.pesan.template-pesan')->with('data', $this->data);
+        return $this->from('wirabumi84@gmail.com')->subject('Balasan CV Wira Bumi')->view('admin.pesan.template-pesan')->with('data', $this->data);
     }
 }
